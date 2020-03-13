@@ -32,7 +32,7 @@ _The interface between smart iframes and Upshow UI Screen was implemented using 
             console.error(`reject onDone - `, error);
         });
 ```
-* __onError__ _Invoked from the smart iframe to tell Upshow that the smart iframe has throw a fatal error and can not continue working_ 
+* __onError__ _Invoked from the smart iframe to tell Upshow that the smart iframe has thrown a fatal error and can not continue working_ 
 
 ```
     bridge.invoke('onError', [error])
