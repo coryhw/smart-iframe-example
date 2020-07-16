@@ -1,10 +1,12 @@
 {
   "name": "smart-iframe-example",
   "version": "0.1.0",
+  "homepage": "https://studioxmedia.com/clients/therail",
   "private": true,
   "dependencies": {
     "anime": "^0.1.2",
     "animejs": "^3.2.0",
+    "qs": "^6.9.4",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",

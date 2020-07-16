@@ -26,10 +26,15 @@
         background-color: #3c3432;
       }
       .main-box{
-        position: relative;
-        width: 1920px;
-        height: 1080px;
-        border:1px solid #3c3432;
+        position: absolute;
+        /*margin-top: 20px;*/
+        /*//border:1px solid #3c3432;*/
+        height: 100%;
+        width: 100%;
+     /*   transform: scale(0.60);
+        margin-left: -240px;
+        margin-top: -190px;*/
+        overflow: hidden;
       }
 
 
@@ -56,20 +61,24 @@
 
       .top-bar{
         position: absolute;
-        top:155px;
+        top:0;
+        width: 95%;
+        min-height: 225px;
       }
 
       .itsonat-sm {
         position: relative;
-        top:-365px;
+        top:0;
         opacity: 0;
+        width:35%;
       }
 
       .ot {
-        position: relative;
-        top:-365px;
+        position: absolute;
+        top:0;
         opacity: 0;
-        right: -773px;
+        right: 0;
+        width: 10%;
       }
 
       .scores{
@@ -79,11 +88,16 @@
 
 
       .listings{
-        margin-top: 12%;
+        margin-top: 10%;
       }
 
       .section{
-        height: 280px;
+        height: 240px;
+        opacity: 0;
+      }
+
+      .section2{
+        height: 240px;
         opacity: 0;
       }
 
@@ -92,17 +106,20 @@
         height: 10px;
         width:100%;
         margin-top:6px;
+        overflow: hidden;
       }
 
       .beige-bg {
+        position: absolute;
         display: inline-block;
         opacity:0;
         background-color: #e6e5e0;
         border-left: 8px solid #3c3432;
         border-bottom: 8px solid #3c3432;
         height: 70%;
+        min-height: 50px;
         width: 87%;
-        float:right;
+        right: 0;
       }
 
       .score-text{
@@ -125,7 +142,7 @@
       .time{
         color: #e6e5e0;
         font-family: 'Arial',sans-serif;
-        font-size: 59px;
+        font-size: 55px;
         font-weight: bolder;
         text-transform: uppercase;
       }
@@ -141,21 +158,20 @@
 
       .team-text{
         position: absolute;
-        width: 11%;
+        width: 100%;
         opacity: 0;
-        left: 201px;
-        top: 42px;
+        top: 15%;
       }
 
       .team1 {
         position: absolute;
         opacity: 0;
-        left: 133px;
+        left: 5%
       }
       .team2{
         position: relative;
         opacity: 0;
-        right: -1290px;
+        right: 5%;
         float: right;
         text-align: right;
       }
@@ -196,7 +212,7 @@
         text-align: center;
         text-transform: uppercase;
         font-weight: bolder;
-        line-height: 34px;
+        line-height: 40px;
       }
 
 
@@ -206,23 +222,23 @@
       }
       .line1, .line2{
         opacity:0;
-        width: 480px;
-        height: 47px;
+        width: 30%;
+        height: 20px;
         border-bottom: 3px solid #e6e5e0;
       }
 
       .line1{
-        left: 380px;
+        left: 17%;
       }
 
       .line2{
-        left: 1132px;
+        right: 4%;
       }
 
       .org-type{
         position: absolute;
         opacity:0;
-        top: 215px;
+        top: 188px;
         color: #e6e5e0;
         font-family: Arial;
         font-size: 34px;
@@ -236,8 +252,6 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
-
     <div class="main-box">
       <img class="its intro" src="img/its.png" alt="its"/>
       <img class="on intro" src="img/on.png" alt="on" />
@@ -254,8 +268,8 @@
               <div class="score-text">
                 <div class="dow">Sun</div>
                 <div class="day">Mar 29</div>
-                <div class="time">11AM
-                  <div class="timezone">E</div>
+                <div class="time">8:00A
+                  <!--div class="timezone">E</div-->
                 </div>
               </div>
               <div class="line line1"></div>
@@ -281,8 +295,8 @@
               <div class="score-text">
                 <div class="dow">Sun</div>
                 <div class="day">Mar 29</div>
-                <div class="time">3
-                  <div class="timezone">E</div>
+                <div class="time">3:30P
+                  <!--div class="timezone">E</div-->
                 </div>
               </div>
               <div class="line line1"></div>
@@ -303,14 +317,13 @@
               </div>
             </div>
           </div>
-
           <div class="section">
             <div class="blue-bg">
               <div class="score-text">
                 <div class="dow">Sun</div>
                 <div class="day">Mar 29</div>
-                <div class="time">6
-                  <div class="timezone">E</div>
+                <div class="time">6:00P
+                  <!--div class="timezone">E</div-->
                 </div>
               </div>
               <div class="line line1"></div>
@@ -331,9 +344,93 @@
               </div>
             </div>
           </div>
+
+          <div class="section2">
+            <div class="blue-bg">
+              <div class="score-text">
+                <div class="dow">Sun</div>
+                <div class="day">Mar 29</div>
+                <div class="time">11:00A
+                  <!--div class="timezone">E</div-->
+                </div>
+              </div>
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="org-type">NHL</div>
+              <div class="beige-bg">
+                <div class="team-text">
+                  <div class="team1">
+                    <div class="state">Minnesota</div>
+                    <div class="team">Twins</div>
+                  </div>
+                  <div class="vs vs-text">vs</div>
+                  <div class="team2">
+                    <div class="state">Oakland</div>
+                    <div class="team">Athletics</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section2">
+            <div class="blue-bg">
+              <div class="score-text">
+                <div class="dow">Sun</div>
+                <div class="day">Mar 29</div>
+                <div class="time">3:00P
+                  <!--div class="timezone">E</div-->
+                </div>
+              </div>
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="org-type">MLB</div>
+              <div class="beige-bg">
+                <div class="team-text">
+                  <div class="team1">
+                    <div class="state">Chicago</div>
+                    <div class="team">Cubs</div>
+                  </div>
+                  <div class="vs vs-text">vs</div>
+                  <div class="team2">
+                    <div class="state">Milkwaukee</div>
+                    <div class="team">Brewers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section2">
+            <div class="blue-bg">
+              <div class="score-text">
+                <div class="dow">Sun</div>
+                <div class="day">Mar 29</div>
+                <div class="time">6:00P
+                  <!--div class="timezone">E</div-->
+                </div>
+              </div>
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="org-type">MLB</div>
+              <div class="beige-bg">
+                <div class="team-text">
+                  <div class="team1">
+                    <div class="state">Pittsburg</div>
+                    <div class="team">Penguins</div>
+                  </div>
+                  <div class="vs vs-text">vs</div>
+                  <div class="team2">
+                    <div class="state">Philadephia</div>
+                    <div class="team">Flyers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
+    <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
