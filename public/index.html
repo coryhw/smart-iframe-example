@@ -20,12 +20,320 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Smart Iframe Example</title>
+    <style>
+
+      html{
+        background-color: #3c3432;
+      }
+      .main-box{
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        border:1px solid #3c3432;
+      }
+
+
+      #left{
+        float:left;
+        width:10%;
+      }
+
+      #right{
+        float:right;
+        width:18%;
+      }
+
+      .intro{
+        opacity: 0;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin-top: -350px;
+        margin-left: -450px;
+        width:900px;
+        height: 700px;
+      }
+
+      .top-bar{
+        position: absolute;
+        top:155px;
+      }
+
+      .itsonat-sm {
+        position: relative;
+        top:-365px;
+        opacity: 0;
+      }
+
+      .ot {
+        position: relative;
+        top:-365px;
+        opacity: 0;
+        right: -773px;
+      }
+
+      .scores{
+        margin: 3%;
+      }
+
+
+
+      .listings{
+        margin-top: 12%;
+      }
+
+      .section{
+        height: 280px;
+        opacity: 0;
+      }
+
+      .blue-bg {
+        background-color: #456077;
+        height: 10px;
+        width:100%;
+        margin-top:6px;
+      }
+
+      .beige-bg {
+        display: inline-block;
+        opacity:0;
+        background-color: #e6e5e0;
+        border-left: 8px solid #3c3432;
+        border-bottom: 8px solid #3c3432;
+        height: 70%;
+        width: 87%;
+        float:right;
+      }
+
+      .score-text{
+        display: inline-block;
+        width: 11%;
+        opacity: 0;
+        margin: 25px 0 0 25px;
+      }
+
+      /* LIGHT*/
+      .dow, .day{
+        color: #e6e5e0;
+        font-family: 'Arial Narrow', sans-serif;
+        font-size: 45px;
+        text-transform: uppercase;
+        line-height: 39px;
+
+      }
+      /* DARK*/
+      .time{
+        color: #e6e5e0;
+        font-family: 'Arial',sans-serif;
+        font-size: 59px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .timezone{
+        display: inline-block;
+        color: #e6e5e0;
+        font-family: 'Arial', sans-serif;
+        font-size: 29px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        vertical-align: super;
+      }
+
+      .team-text{
+        position: absolute;
+        width: 11%;
+        opacity: 0;
+        left: 201px;
+        top: 42px;
+      }
+
+      .team1 {
+        position: absolute;
+        opacity: 0;
+        left: 133px;
+      }
+      .team2{
+        position: relative;
+        opacity: 0;
+        right: -1290px;
+        float: right;
+        text-align: right;
+      }
+
+      .state{
+        color: #3c3432;
+        font-family: 'Arial Narrow';
+        font-size: 45px;
+        text-transform: uppercase;
+        line-height: 39px;
+
+      }
+      .team{
+        color: #3c3432;
+        font-family: sans-serif;
+        font-size: 75px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        line-height: 65px;
+      }
+      .vs {
+        position: absolute;
+        top: 45px;
+        opacity:0;
+        height: 35px;
+        width: 35px;
+        background-color: #446176;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .vs-text{
+
+        display: inline-block;
+        color: #e6e5e0;
+        font-family: Arial;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bolder;
+        line-height: 34px;
+      }
+
+
+      .line{
+        position: absolute;
+        top: 185px;
+      }
+      .line1, .line2{
+        opacity:0;
+        width: 480px;
+        height: 47px;
+        border-bottom: 3px solid #e6e5e0;
+      }
+
+      .line1{
+        left: 380px;
+      }
+
+      .line2{
+        left: 1132px;
+      }
+
+      .org-type{
+        position: absolute;
+        opacity:0;
+        top: 215px;
+        color: #e6e5e0;
+        font-family: Arial;
+        font-size: 34px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bolder;
+      }
+    </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+
+    <div class="main-box">
+      <img class="its intro" src="img/its.png" alt="its"/>
+      <img class="on intro" src="img/on.png" alt="on" />
+      <img class="at intro" src="img/at.png" alt="at" />
+      <img class="buffalo intro" src="img/buffalo.png" alt="buffalo" />
+      <div class="scores">
+        <div class="top-bar">
+          <img class="itsonat-sm" src="img/itsonat-sm.png" alt="itsonat" />
+          <img class="ot" src="img/ot.png" alt="ot" />
+        </div>
+        <div class="listings">
+          <div class="section">
+            <div class="blue-bg">
+              <div class="score-text">
+                <div class="dow">Sun</div>
+                <div class="day">Mar 29</div>
+                <div class="time">11AM
+                  <div class="timezone">E</div>
+                </div>
+              </div>
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="org-type">NHL</div>
+              <div class="beige-bg">
+                <div class="team-text">
+                  <div class="team1">
+                    <div class="state">Minnesota</div>
+                    <div class="team">Twins</div>
+                  </div>
+                  <div class="vs vs-text">vs</div>
+                  <div class="team2">
+                    <div class="state">Oakland</div>
+                    <div class="team">Athletics</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="blue-bg">
+              <div class="score-text">
+                <div class="dow">Sun</div>
+                <div class="day">Mar 29</div>
+                <div class="time">3
+                  <div class="timezone">E</div>
+                </div>
+              </div>
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="org-type">MLB</div>
+              <div class="beige-bg">
+                <div class="team-text">
+                  <div class="team1">
+                    <div class="state">Chicago</div>
+                    <div class="team">Cubs</div>
+                  </div>
+                  <div class="vs vs-text">vs</div>
+                  <div class="team2">
+                    <div class="state">Milkwaukee</div>
+                    <div class="team">Brewers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="blue-bg">
+              <div class="score-text">
+                <div class="dow">Sun</div>
+                <div class="day">Mar 29</div>
+                <div class="time">6
+                  <div class="timezone">E</div>
+                </div>
+              </div>
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="org-type">MLB</div>
+              <div class="beige-bg">
+                <div class="team-text">
+                  <div class="team1">
+                    <div class="state">Pittsburg</div>
+                    <div class="team">Penguins</div>
+                  </div>
+                  <div class="vs vs-text">vs</div>
+                  <div class="team2">
+                    <div class="state">Philadephia</div>
+                    <div class="team">Flyers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

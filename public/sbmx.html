@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buffalo Wild Wings</title>
+  <script src="lib/anime.min.js"></script>
+  <style>
+    html{
+      background-color: #3c3432;
+    }
+    .main-box{
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      border:1px solid #3c3432;
+    }
+
+
+    #left{
+      float:left;
+      width:10%;
+    }
+
+    #right{
+      float:right;
+      width:18%;
+    }
+
+    .intro{
+      opacity: 0;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      margin-top: -350px;
+      margin-left: -450px;
+      width:900px;
+      height: 700px;
+    }
+
+    .top-bar{
+      position: absolute;
+      top:155px;
+    }
+
+    .itsonat-sm {
+      position: relative;
+      top:-365px;
+      opacity: 0;
+    }
+
+    .ot {
+      position: relative;
+      top:-365px;
+      opacity: 0;
+      right: -773px;
+    }
+
+    .scores{
+      margin: 3%;
+    }
+
+
+
+    .listings{
+      margin-top: 12%;
+    }
+
+    .section{
+      height: 280px;
+      opacity: 0;
+    }
+
+    .blue-bg {
+      background-color: #456077;
+      height: 10px;
+      width:100%;
+      margin-top:6px;
+    }
+
+    .beige-bg {
+      display: inline-block;
+      opacity:0;
+      background-color: #e6e5e0;
+      border-left: 8px solid #3c3432;
+      border-bottom: 8px solid #3c3432;
+      height: 70%;
+      width: 87%;
+      float:right;
+    }
+
+    .score-text{
+      display: inline-block;
+      width: 11%;
+      opacity: 0;
+      margin: 25px 0 0 25px;
+    }
+
+    /* LIGHT*/
+    .dow, .day{
+      color: #e6e5e0;
+      font-family: 'Arial Narrow', sans-serif;
+      font-size: 45px;
+      text-transform: uppercase;
+      line-height: 39px;
+
+    }
+    /* DARK*/
+    .time{
+      color: #e6e5e0;
+      font-family: 'Arial',sans-serif;
+      font-size: 59px;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+    .timezone{
+      display: inline-block;
+      color: #e6e5e0;
+      font-family: 'Arial', sans-serif;
+      font-size: 29px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      vertical-align: super;
+    }
+
+    .team-text{
+      position: absolute;
+      width: 11%;
+      opacity: 0;
+      left: 201px;
+      top: 42px;
+    }
+
+    .team1 {
+      position: absolute;
+      opacity: 0;
+      left: 133px;
+    }
+    .team2{
+      position: relative;
+      opacity: 0;
+      right: -1290px;
+      float: right;
+      text-align: right;
+    }
+
+    .state{
+      color: #3c3432;
+      font-family: 'Arial Narrow';
+      font-size: 45px;
+      text-transform: uppercase;
+      line-height: 39px;
+
+    }
+    .team{
+      color: #3c3432;
+      font-family: sans-serif;
+      font-size: 75px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      line-height: 65px;
+    }
+    .vs {
+      position: absolute;
+      top: 45px;
+      opacity:0;
+      height: 35px;
+      width: 35px;
+      background-color: #446176;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .vs-text{
+
+      display: inline-block;
+      color: #e6e5e0;
+      font-family: Arial;
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      line-height: 34px;
+    }
+
+
+    .line{
+      position: absolute;
+      top: 185px;
+    }
+    .line1, .line2{
+      opacity:0;
+      width: 480px;
+      height: 47px;
+      border-bottom: 3px solid #e6e5e0;
+    }
+
+    .line1{
+      left: 380px;
+    }
+
+    .line2{
+      left: 1132px;
+    }
+
+    .org-type{
+      position: absolute;
+      opacity:0;
+      top: 215px;
+      color: #e6e5e0;
+      font-family: Arial;
+      font-size: 34px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+<body>
+<div class="main-box">
+  <img class="its intro" src="img/its.png">
+  <img class="on intro" src="img/on.png">
+  <img class="at intro" src="img/at.png">
+  <img class="buffalo intro" src="img/buffalo.png">
+
+
+  <div class="scores">
+    <div class="top-bar">
+      <img class="itsonat-sm" src="img/itsonat-sm.png">
+      <img class="ot" src="img/ot.png">
+    </div>
+    <div class="listings">
+      <div class="section">
+        <div class="blue-bg">
+          <div class="score-text">
+            <div class="dow">Sun</div>
+            <div class="day">Mar 29</div>
+            <div class="time">11AM<div class="timezone">E</div></div>
+          </div>
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="org-type">NHL</div>
+          <div class="beige-bg">
+            <div class="team-text">
+              <div class="team1"><div class="state">Minnesota</div><div class="team">Twins</div></div>
+              <div class="vs vs-text">vs</div>
+              <div class="team2"><div class="state">Oakland</div><div class="team">Athletics</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="blue-bg">
+          <div class="score-text">
+            <div class="dow">Sun</div>
+            <div class="day">Mar 29</div>
+            <div class="time">3<div class="timezone">E</div></div>
+          </div>
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="org-type">MLB</div>
+          <div class="beige-bg">
+            <div class="team-text">
+              <div class="team1"><div class="state">Chicago</div><div class="team">Cubs</div></div>
+              <div class="vs vs-text">vs</div>
+              <div class="team2"><div class="state">Milkwaukee</div><div class="team">Brewers</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="blue-bg">
+          <div class="score-text">
+            <div class="dow">Sun</div>
+            <div class="day">Mar 29</div>
+            <div class="time">6<div class="timezone">E</div></div>
+          </div>
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="org-type">MLB</div>
+          <div class="beige-bg">
+            <div class="team-text">
+              <div class="team1"><div class="state">Pittsburg</div><div class="team">Penguins</div></div>
+              <div class="vs vs-text">vs</div>
+              <div class="team2"><div class="state">Philadephia</div><div class="team">Flyers</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var logoAnimation = (function() {
+
+    var logoAnimationTL = anime.timeline({
+              autoplay: false,
+              easing: 'easeOutSine'
+            })
+            .add({
+              targets: '.its',
+              opacity: [0, 1],
+              scale: [1.5, 1],
+              duration: 500,
+            })
+            .add({
+              targets: '.its',
+              opacity: [1, 0],
+              duration: 1,
+            })
+            .add({
+              targets: '.on',
+              opacity: [0, 1],
+              scale: [1.5, 1],
+              duration: 500,
+            })
+            .add({
+              targets: '.on',
+              opacity: [1, 0],
+              duration: 1,
+            })
+            .add({
+              targets: '.at',
+              opacity: [0, 1],
+              scale: [1.5, 1],
+              duration: 500,
+            })
+            .add({
+              targets: '.at',
+              opacity: [1, 0],
+              duration: 1,
+            })
+            .add({
+              targets: '.buffalo',
+              opacity: [0, 1],
+              scale: [1.5, 1],
+              duration: 500,
+            })
+            .add({
+              targets: '.buffalo',
+              opacity: [.5, 0],
+              translateY: 100,
+              duration: 200,
+            }, '+=500')
+
+            .add({
+              targets: '.itsonat-sm, .ot',
+              opacity: [0, 1],
+              translateY: 190,
+              duration: 175,
+              delay: anime.stagger(100)
+            })
+
+
+            .add({
+              targets: '.section',
+              opacity: [0, 1],
+              duration: 15,
+              translateY: 10,
+            })
+
+            .add({
+              targets: '.beige-bg',
+              opacity: [0, 1],
+              duration: 15
+            })
+
+
+
+            .add({
+              targets: '.blue-bg',
+              translateX: [-1000,0],
+              opacity: [0, 1],
+              duration: 455,
+              delay: anime.stagger(100)
+            })
+
+
+            .add({
+              targets: '.blue-bg',
+              height: '275px',
+              duration: 255,
+              delay: anime.stagger(150)
+            })
+
+
+
+
+
+
+
+            .add({
+              targets: '.team-text',
+              opacity: [0, 1],
+              duration: 75
+            })
+
+            .add({
+              targets: '.team1',
+              opacity: [0, 1],
+              duration: 75
+            })
+
+
+
+            .add({
+              targets: '.team2',
+              opacity: [0, 1],
+              duration: 75
+            })
+
+
+            .add({
+              targets: '.line',
+              opacity: [0, 1],
+              duration: 75
+            })
+
+
+
+            .add({
+              targets: '.score-text',
+              opacity: [0, 1],
+              translateY: 10,
+              duration: 175
+            })
+
+            .add({
+              targets: '.vs',
+              opacity: [0, 1],
+              translateX: 760,
+              scale: 2,
+              rotate: '1turn',
+              duration: 500
+            })
+
+            .add({
+              targets: '.org-type',
+              opacity: [0, 1],
+              translateX: 950,
+              scale: 2,
+              rotate: '1turn',
+              duration: 500
+            })
+
+
+    ;
+
+    return logoAnimationTL;
+
+  })();
+  window.setTimeout(function () {
+    logoAnimation.play();
+  }, 10000);
+
+  logoAnimation.play();
+
+
+</script>
+</body>
+</html>
